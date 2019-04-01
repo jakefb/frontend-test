@@ -1,0 +1,37 @@
+/**
+ * app.sccs
+ *
+ * This style sheet does not form part of the component library and is a small set of styles
+ * for the demo page / app. You should make all changes in components.scss
+ */
+
+:root {
+  --app-body-background-color: #f2f3f4;
+  --app-panel-background-color: #ffffff;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--app-body-background-color);
+  display: inline-block;
+}
+
+.app-index {
+  text-align: center;
+  padding: 2rem;
+  background: var(--app-panel-background-color);
+}
+
+.app-heading {
+  font-family: serif;
+}
+
+.app-example {
+  background: var(--app-panel-background-color);
+  padding: 2rem;
+}
