@@ -9,7 +9,7 @@ Carefully read the following, think about what is being tested for, and complete
 
 ## Final submission
 
-Please zip your finished project repository into a single file, and submit it to your primary contact person.
+Please zip your finished project repository into a single file excluding the `node_modules` directory (`.cache`, `.git` and `dist` are fine to include), and submit it to your primary contact person.
 
 ## The project
 
@@ -77,6 +77,8 @@ We've had an enhancement request that we should be able to render links that loo
 - Write the tests in the provided test file to support the new functionality
 - Commit your code changes to the project
 
+_We recommend using `index.js` to make any exploratory test changes to Button instances as this is the only script wired up to rebuild automatically._
+
 #### We're looking for:
 
 - [ ] Understanding of HTML elements and working with attributes
@@ -88,17 +90,14 @@ We've had an enhancement request that we should be able to render links that loo
 
 ### 🚀 5. HTML & CSS
 
-1. Our designer has given us a new button design. Load `/design-mock.html` in a browser to see the prototype.
-2. Implement the blue button as per the design mock
-3. Implement the favourite icon functionality for the button based on an `isFavourtie` property and an svg icon.
-4. Configure the button to open a link to https://www.xero.com
-5. Vertically and horizontally center the app in index.html.
+Our designer has given us a new button design. Load `/design-mock.html` in a browser to see the prototype.
 
 #### Please:
 
-- Use the mockup to implement the design for the existing component
-- Modify the Implementation to support the requirements
-- Create the styles in the stylesheet, following existing conventions
+- Implement the blue button as per the design mock
+- Implement the favourite icon functionality for the button based on an `isFavourite` property and the svg icon supplied in the component
+- Configure the button to open a link to https://www.xero.com
+- Vertically and horizontally center the app in index.html- Create the styles in the stylesheet, following existing conventions
 - Commit your code changes to the project
 
 #### We're looking for:
