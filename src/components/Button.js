@@ -17,12 +17,59 @@ const star = (
   </svg>
 );
 
+const ButtonIcon = props => {
+  if (props.isFavourite) {
+    return (
+      <React.Fragment>
+        {star} {props.children}
+      </React.Fragment>
+    );
+  }
+  return props.children;
+};
+
 const Button = props => {
-  return (
-    <button className={`c-button`} onClick={props.onClick}>
-      {props.children}
-    </button>
-  );
+  let buttonClass;
+
+  if (props.isFavourite) {
+    buttonClass = 'c-button c-button-blue';
+  } else {
+    buttonClass = 'c-button';
+  }
+
+  if (props.isLink) {
+    let rel;
+
+    /** if isExternalLink is true prevent new page from having access to 'window.opener' */
+    if (props.isExternalLink) {
+      rel = 'external noopener noreferrer';
+    }
+
+    return (
+      <a
+        className={buttonClass}
+        onClick={props.onClick}
+        target={props.target}
+        rel={rel}
+        href={props.href}
+      >
+        <ButtonIcon isFavourite={props.isFavourite}>{props.children}</ButtonIcon>
+      </a>
+    );
+  } else {
+    return (
+      <button className={buttonClass} onClick={props.onClick}>
+        <ButtonIcon isFavourite={props.isFavourite}>{props.children}</ButtonIcon>
+      </button>
+    );
+  }
+};
+
+ButtonIcon.propTypes = {
+  children: PropTypes.node,
+
+  /** isFavourite */
+  isFavourite: PropTypes.bool,
 };
 
 Button.propTypes = {

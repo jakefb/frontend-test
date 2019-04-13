@@ -1,4 +1,4 @@
-/** 
+/**
  * 1. Variables
  **/
 
@@ -12,6 +12,7 @@ $grey-4: #e6e7e9;
 $white: #ffffff;
 
 $blue: #0078c8;
+$blue-dark: #005b99;
 $red: #dc3246;
 $green: #00823c;
 
@@ -39,6 +40,14 @@ $border-radius: 3px;
  **/
 
 @import 'normalize';
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 /**
  * 4. Typography
@@ -102,7 +111,20 @@ h4 {
 }
 
 .c-button-blue {
+  border: 1px solid $blue;
+  background-color: $blue;
+  color: $white;
+  &:active,
+  &:focus {
+    outline: solid $blue-dark 2px;
+  }
+  &:hover {
+    background: $blue-dark;
+  }
 }
 
 .c-icon {
+  width: 14px;
+  height: 14px;
+  fill: $white;
 }

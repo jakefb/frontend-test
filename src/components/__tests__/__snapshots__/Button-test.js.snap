@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button/> should be able to handle click events for links 1`] = `
+<a
+  class="c-button"
+  href="https://www.xero.com/nz/"
+>
+  Link with href attribute
+</a>
+`;
+
+exports[`<Button/> should be able to receive and handle an onClick callback 1`] = `
+<button
+  class="c-button"
+>
+  Test onClick
+</button>
+`;
+
+exports[`<Button/> should render as a button element when no type is provided 1`] = `
+<button
+  class="c-button"
+>
+  Test button
+</button>
+`;
+
+exports[`<Button/> should render as a link element when isLink flag is set 1`] = `
+<a
+  class="c-button"
+>
+  Test link
+</a>
+`;
+
+exports[`<Button/> should render as a link element with \`rel="external noopener noreferrer"\` if the \`isExternalLink\` prop is true 1`] = `
+<a
+  class="c-button"
+  href="https://www.xero.com/nz/"
+  rel="external noopener noreferrer"
+>
+  Test external link
+</a>
+`;
+
+exports[`<Button/> should render as a link element with existing \`rel\` value intact when \`isExternalLink\` prop is false 1`] = `
+<a
+  class="c-button"
+  href="https://www.xero.com/nz/"
+>
+  Test internal link
+</a>
+`;
+
+exports[`<Button/> should set the \`target\` prop as the \`target\` attribute if rendering a link 1`] = `
+<a
+  class="c-button"
+  href="https://www.xero.com/nz/"
+  target="_blank"
+>
+  Test link with target
+</a>
+`;
+
+exports[`<Button/> should support an href attribute if the button is a link and no click handler has been defined 1`] = `
+<a
+  class="c-button"
+  href="https://www.xero.com/nz/"
+>
+  Link with href attribute
+</a>
+`;

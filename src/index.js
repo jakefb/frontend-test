@@ -8,17 +8,27 @@ import './scss/components.scss';
 class App extends React.Component {
   render() {
     return (
-      <div className="container app-index">
-        <h1>One Blue Button</h1>
-        <Button
-          onClick={() => {
-            console.log('Hello World');
-          }}
-        >
-          Hello
-        </Button>
-        &nbsp;
-        <Button>World</Button>
+      <div className="wrapper">
+        <div className="container app-index">
+          <h1>One Blue Button</h1>
+          <Button
+            onClick={() => {
+              console.log('Hello World');
+            }}
+          >
+            Hello
+          </Button>
+          &nbsp;
+          <Button
+            isLink={true}
+            isExternalLink
+            isFavourite
+            target="_blank"
+            href="https://www.xero.com/nz/"
+          >
+            World
+          </Button>
+        </div>
       </div>
     );
   }
